@@ -1,0 +1,58 @@
+---
+import Main from '../layouts/main.astro';
+---
+
+<style>
+    .container {
+        margin-top: 20px;
+    }
+    .card {
+        background-color: #ffffff; /* White background for cards */
+        color: #333;
+        border-radius: 12px;
+        box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+        border: none;
+        padding: 20px;
+    }
+    .form-control {
+        border-radius: 12px;
+    }
+    .btn {
+        border-radius: 20px;
+    }
+</style>
+
+<Main>
+    <div class="container">
+        <div class="card">
+            <h2 class="mb-4">Upload New App</h2>
+            <form>
+                <div class="mb-3">
+                    <label for="appName" class="form-label">App Name</label>
+                    <input type="text" class="form-control" id="appName" placeholder="Enter app name">
+                </div>
+                <div class="mb-3">
+                    <label for="iconLink" class="form-label">Icon Link</label>
+                    <input type="text" class="form-control" id="iconLink" placeholder="Enter icon URL">
+                </div>
+                <div class="mb-3">
+                    <label for="rating" class="form-label">Rating</label>
+                    <input type="number" class="form-control" id="rating" placeholder="Enter rating (0-5)" min="0" max="5">
+                </div>
+                <div class="mb-3">
+                    <label for="imageLinks" class="form-label">Image Links (comma separated)</label>
+                    <input type="text" class="form-control" id="imageLinks" placeholder="Enter image URLs separated by commas">
+                </div>
+                <div class="mb-3">
+                    <label for="description" class="form-label">Description</label>
+                    <textarea class="form-control" id="description" rows="4" placeholder="Enter app description"></textarea>
+                </div>
+                <div class="mb-3">
+                    <label for="appLinks" class="form-label">App Links (comma separated)</label>
+                    <input type="text" class="form-control" id="appLinks" placeholder="Enter app URLs separated by commas">
+                </div>
+                <button type="submit" class="btn btn-primary">Upload App</button>
+            </form>
+        </div>
+    </div>
+</Main>

@@ -1,0 +1,109 @@
+---
+import Main from '../layouts/main.astro';
+---
+
+<style>
+	.container {
+		margin-top: 20px;
+	}
+	.card {
+		background-color: #ffffff;
+		color: #333;
+		border-radius: 12px;
+		border: 1px solid #44444448 !important;
+		box-shadow: none !important;
+		border: none;
+		margin-bottom: 20px;
+	}
+	.card-body {
+		padding: 20px;
+	}
+
+	.card-body .image-container {
+		width: 100px;
+		aspect-ratio: 1;
+		border-radius: 99999px;
+		background-color: white;
+		margin-bottom: 8px;
+		border: 2px solid #44444448;
+		margin-inline: auto;
+		background-size: cover;
+		position: relative;
+	}
+
+	.card-body .image-container img {
+		position: absolute;
+		top: 50%;
+		left: 50%;
+		transform: translate(-50%, -50%);
+		width: 96%;
+		height: 96%;
+		max-width: inherit;
+		max-height: inherit;
+		border-radius: 99999px;
+	}
+	.card-title {
+		font-size: 1.25rem;
+		font-weight: bold;
+		text-align: center;
+	}
+	.card-text {
+		color: #666;
+	}
+	.card-footer {
+		display: flex;
+		justify-content: space-between;
+		align-items: center;
+	}
+	.btn {
+		border-radius: 20px;
+	}
+	.btn-group {
+		margin-top: 10px;
+	}
+	.actions {
+		display: flex;
+		flex-direction: row;
+		gap: 8px;
+
+		.btn {
+			padding: 6px;
+			padding-inline: 12px;
+		}
+	}
+</style>
+
+
+<Main>
+	<div class="container">
+		<div class="d-flex justify-content-between align-items-center mb-3">
+			<h1>Apps</h1>
+			<a href="/upload" class="btn btn-primary">Add New App</a>
+		</div>
+		<div class="row">
+			
+			<div class="col-lg-4 col-md-6 mb-4">
+				<div class="card">
+					<div class="card-body">
+						<div class="image-container"> 
+							<img src="https://downloadr2.apkmirror.com/wp-content/uploads/2022/07/28/62d7973e84c81.png" alt="AppImage"> 
+						</div>
+						<h5 class="card-title">App One</h5>
+						<p class="card-text">This is a description for App One. It provides features and functionalities that are useful for users.</p>
+					</div>
+					<div class="card-footer">
+						<div class="actions">
+							<a href="#" class="btn btn-warning btn-sm">Edit</a>
+							<a href="#" class="btn btn-danger btn-sm">Delete</a>
+						</div>
+						<span class="badge bg-secondary">Category A</span>
+					</div>
+				</div>
+			</div>
+	
+			
+	
+		</div>
+	</div>
+	
+</Main>
